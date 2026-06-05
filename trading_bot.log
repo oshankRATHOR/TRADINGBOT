@@ -1,2 +1,0 @@
-[2026-06-03 00:12:25] trading_bot - INFO - Attempting to place order with payload: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 80000.0, 'timeInForce': 'GTC'}
-[2026-06-03 00:12:26] trading_bot - INFO - Order successfully placed: {'orderId': 13856755382, 'status': 'NEW', 'executedQty': '0.0000', 'avgPrice': '0.00'}

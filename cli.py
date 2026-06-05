@@ -71,5 +71,22 @@ def trade(
         console.print(Panel(error_msg, title="Execution Error", border_style="red"))
 
 
+@app.command()
+def ping():
+    """
+    Test connection to the Binance Futures Testnet.
+    """
+    console.print("[bold yellow]Pinging Binance Futures Testnet...[/bold yellow]")
+    try:
+        from bot.client import BinanceTestnetClient
+        client = BinanceTestnetClient()
+        if client.ping_server():
+            console.print(Panel("[bold green]Successfully connected to Binance Futures Testnet.[/bold green]", title="Success", border_style="green"))
+        else:
+            console.print(Panel("[bold red]Failed to connect to Binance Futures Testnet.[/bold red]", title="Error", border_style="red"))
+    except Exception as e:
+        console.print(Panel(f"[bold red]Error initializing client:[/bold red]\n{str(e)}", title="Connection Error", border_style="red"))
+
+
 if __name__ == "__main__":
     app()
